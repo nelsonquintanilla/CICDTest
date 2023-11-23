@@ -1,4 +1,4 @@
-package com.example.cicdtest.ui.theme
+package com.ravn.cicdtest.ui.theme
 
 import android.app.Activity
 import android.os.Build

@@ -11,11 +11,11 @@ val keystoreProperties = Properties()
 keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 
 android {
-    namespace = "com.example.cicdtest"
+    namespace = "com.ravn.cicdtest"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.cicdtest"
+        applicationId = "com.ravn.cicdtest"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -27,7 +27,7 @@ android {
         }
     }
     signingConfigs {
-        create("debug") {
+        create("release") {
             storeFile = file(keystoreProperties["storeFile"] as String)
             storePassword = keystoreProperties["storePassword"] as String
             keyAlias = keystoreProperties["keyAlias"] as String
@@ -37,6 +37,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

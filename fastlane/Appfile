@@ -1,2 +1,2 @@
 json_key_file("/Users/nelsonquintanilla/Documents/ravn/ravn-android-ci-dad17f15ee54.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
-package_name("com.example.cicdtest") # e.g. com.krausefx.app
+package_name("com.ravn.cicdtest") # e.g. com.krausefx.app

@@ -1,4 +1,4 @@
-package com.example.cicdtest
+package com.ravn.cicdtest
 
 import org.junit.Test
 
